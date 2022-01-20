@@ -53,7 +53,7 @@
 
 #drop {
   font-size: 25px;
-  background-color: rgba(255, 255, 255, 0.466);
+  background-color: rgba(255, 255, 255, 0);
   color: white;
   height: 35px;
   border-radius: 5px;
@@ -62,7 +62,7 @@
 
 #drop2 {
   font-size: 25px;
-  background-color: rgb(255, 255, 255,0.466);
+  background-color: rgba(16, 140, 255, 0);
   color: rgb(255, 255, 255);
   height: 30px;
   width: 50px;
