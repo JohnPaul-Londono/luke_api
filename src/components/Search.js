@@ -24,6 +24,7 @@ const Search = (props) => {
                 <div className='search'>
                     <label> Search For: </label>
                     <select id='drop' onChange={(event) => (setPeople_Planets(event.target.value))}>
+                        <option hidden selected disabled>Pick One</option>
                         <option value="people">People</option>
                         <option value="planets">Planets</option>
                     </select>

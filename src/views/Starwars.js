@@ -12,13 +12,18 @@ const Starwars = (props) => {
                 console.log(res);
                 setStarwars(res.data);
             })
-            .catch(err => console.log(err))
+            .catch(err =>{
+                console.log(err);
+                setStarwars("");
+            } )
     }, [people_planets, id])
 
     return (
         <div>
             {
-                people_planets === "people" ?
+                starwars.length <= 0 ?
+                <h2>These are not droids gurl</h2>
+                : people_planets === "people" ?
 
                     <div className="search">
                         <h1>{starwars.name}</h1>
@@ -27,14 +32,14 @@ const Starwars = (props) => {
                         <p>Hair Color: {starwars.hair_color}</p>
                         <p>Skin Color: {starwars.skin_color}</p>
                     </div>
-                    :
+                    : people_planets === "planets" ?
                     <div className="search">
                         <h1>{starwars.name}</h1>
-                        <p> Climate: {starwars.climate}  ø</p>
+                        <p> Climate: {starwars.climate}  &deg;</p>
                         <p>Population: {starwars.population} </p>
                         <p>Terrain: {starwars.terrain}</p>
                         <p>diameter: {starwars.diameter} </p>
-                    </div>
+                    </div> :""
             }
         </div>
     )
